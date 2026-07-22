@@ -1,5 +1,4 @@
 class Solution:
-
     MAX_CAP = 10**9 + 7
 
     def partition(t, s: str, stopper: str = "0"):
@@ -13,7 +12,6 @@ class Solution:
             res += el
         yield res
 
-
     def numSub(self, s: str) -> int:
         substrings = self.partition(s)
         res = 0
@@ -24,4 +22,3 @@ class Solution:
             else:
                 res += (n + 1) * n // 2
         return res % self.MAX_CAP
-        

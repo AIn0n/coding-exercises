@@ -1,5 +1,6 @@
 import re
 
+
 class Solution:
     MAX_CAP = 10**9 + 7
 

@@ -1,5 +1,6 @@
 import re
 
+
 class Solution:
     def countPalindromicSubsequence(self, s: str) -> int:
         res = 0
@@ -8,6 +9,7 @@ class Solution:
             if palindromes is not None:
                 res += len(set(palindromes.groups()[0]))
         return res
+
 
 s = Solution()
 

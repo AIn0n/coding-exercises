@@ -2,15 +2,13 @@ from operator import add, mul
 from functools import reduce
 from string import whitespace
 
-OP = {
-    "+": add,
-    "*": mul
-}
+OP = {"+": add, "*": mul}
 
 INIT = {
     "+": 0,
     "*": 1,
 }
+
 
 def solution(rows: list[str]) -> int:
     curr_op = " "
@@ -25,7 +23,6 @@ def solution(rows: list[str]) -> int:
             num_stack.clear()
             continue
         num_stack.append(int("".join(cell[:-1])))
-
 
     return res
 

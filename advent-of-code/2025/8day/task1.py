@@ -1,13 +1,14 @@
-
 import numpy as np
 from operator import mul
 from functools import reduce
+
 
 def parse_input(path: str) -> list[np.array]:
     res = []
     for line in open(path).readlines():
         res.append(np.array([int(el) for el in line[:-1].split(",")]))
     return res
+
 
 def print_readable_set(s: set) -> None:
     print(f"=== SET START === len({len(s)})")
@@ -16,6 +17,7 @@ def print_readable_set(s: set) -> None:
             print(int(e), end=", ")
         print("")
     print(f"=== SET END ===")
+
 
 def solution(path: str, n: int) -> int:
     junctions = parse_input(path)
@@ -57,5 +59,6 @@ def solution(path: str, n: int) -> int:
 
     return reduce(mul, sorted((len(el) for el in res), reverse=True)[:3], 1)
 
+
 if __name__ == "__main__":
-    print(solution("valid_input.txt", n = 1000))
+    print(solution("valid_input.txt", n=1000))

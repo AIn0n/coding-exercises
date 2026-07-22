@@ -6,5 +6,5 @@ class Solution:
                 pointer += 1
             if bits[pointer] == 1:
                 pointer += 2
-        
+
         return pointer != len(bits)

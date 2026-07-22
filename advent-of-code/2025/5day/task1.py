@@ -1,4 +1,3 @@
-
 def solution(rows: list[str]) -> int:
     ranges_flag = True
     ranges = []
@@ -19,7 +18,6 @@ def solution(rows: list[str]) -> int:
                 counter += 1
                 break
     return counter
-
 
 
 if __name__ == "__main__":

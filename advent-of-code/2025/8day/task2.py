@@ -1,14 +1,15 @@
-
 import numpy as np
 from operator import mul
 from functools import reduce
 import json
+
 
 def parse_input(path: str) -> list[np.array]:
     res = []
     for line in open(path).readlines():
         res.append(np.array([int(el) for el in line[:-1].split(",")]))
     return res
+
 
 def solution(path: str) -> int:
     junctions = parse_input(path)
@@ -51,13 +52,12 @@ def solution(path: str) -> int:
                 res[find_x].add(junctions[y])
         if find_y != -1:
             res[find_y].add(junctions[x])
-        
 
         if junctions[x][0] * junctions[y][0] == 25272:
             print(count)
             for el in res:
                 print(len(el))
-            
+
             return junctions[x][0] * junctions[y][0]
 
 

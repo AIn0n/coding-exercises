@@ -15,6 +15,8 @@ for line in lines:
 first_list.sort()
 second_list.sort()
 
-diff = reduce(lambda acc, new: acc + abs(new[0] - new[1]), zip(first_list, second_list), 0)
+diff = reduce(
+    lambda acc, new: acc + abs(new[0] - new[1]), zip(first_list, second_list), 0
+)
 
 print(diff)

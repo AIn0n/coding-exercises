@@ -1,6 +1,7 @@
 from collections import defaultdict
 from copy import deepcopy
 
+
 def solution(rows: list[str]) -> int:
     beams_pos = defaultdict(int)
     beams_pos[rows[0].find("S")] = 1
@@ -19,9 +20,8 @@ def solution(rows: list[str]) -> int:
                 del beams_pos[idx]
         for k, v in new_beams_pos.items():
             beams_pos[k] += v
-    
-    return sum(beams_pos.values())
 
+    return sum(beams_pos.values())
 
 
 if __name__ == "__main__":

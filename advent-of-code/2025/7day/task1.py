@@ -1,4 +1,3 @@
-
 def solution(rows: list[str]) -> int:
     beams_pos = set([rows[0].find("S")])
     splits = 0
@@ -13,9 +12,8 @@ def solution(rows: list[str]) -> int:
                 new_beams_pos.add(idx + 1)
                 beams_pos.remove(idx)
         beams_pos.update(new_beams_pos)
-    
-    return splits
 
+    return splits
 
 
 if __name__ == "__main__":

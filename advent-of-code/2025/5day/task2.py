@@ -1,18 +1,21 @@
 from itertools import chain
 
+
 # if second start or end is between first one values
 def is_overlapping(first: tuple[int], second: tuple[int]) -> bool:
     first_start, first_end = first[0], first[1]
     second_start, second_end = second[0], second[1]
     return (
-        first_start <= second_start <= first_end or
-        first_start <= second_end <= first_end
+        first_start <= second_start <= first_end
+        or first_start <= second_end <= first_end
     )
+
 
 def merge_ranges(first: tuple[int], second: tuple[int]) -> tuple[int]:
     first_start, first_end = first[0], first[1]
     second_start, second_end = second[0], second[1]
     return tuple([min(first_start, second_start), max(first_end, second_end)])
+
 
 def solution(rows: list[str]) -> int:
     ranges = []

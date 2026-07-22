@@ -3,11 +3,13 @@ from dataclasses import dataclass
 
 _input = open("in.txt", "rt").read().split("\n")
 
+
 @dataclass(frozen=True)
 class Node:
     curr: str
     l: str
     r: str
+
 
 nodes = []
 

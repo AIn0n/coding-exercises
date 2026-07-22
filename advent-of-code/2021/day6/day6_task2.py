@@ -1,4 +1,4 @@
-start = [int(x) for x in open("input.txt").read().split(',')]
+start = [int(x) for x in open("input.txt").read().split(",")]
 fish_categories = [0] * 9
 
 for n in start:

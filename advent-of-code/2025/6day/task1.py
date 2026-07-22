@@ -2,10 +2,7 @@ import pandas as pd
 from operator import add, mul
 from functools import reduce
 
-OP = {
-    "+": add,
-    "*": mul
-}
+OP = {"+": add, "*": mul}
 
 INIT = {
     "+": 0,
@@ -21,6 +18,7 @@ def solution(input_path: str) -> int:
     for col, op in zip(df.columns, operators):
         res += reduce(lambda x, y: OP[op](x, y), df[col], INIT[op])
     return res
+
 
 if __name__ == "__main__":
     print(solution("valid_input.txt"))

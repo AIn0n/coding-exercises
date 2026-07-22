@@ -7,7 +7,7 @@ def is_repetition(num: int) -> bool:
     len_num = len(str_num)
     if len_num % 2 != 0:
         return False
-    for digit in str_num[:(len_num // 2)]:
+    for digit in str_num[: (len_num // 2)]:
         seq += digit
         find_res = re.findall(seq, str_num)
         if "".join(find_res) == str_num and len(find_res) == 2:
@@ -24,7 +24,6 @@ def solution(inp: str) -> int:
         invalid_ids = [el for el in range(start, end + 1) if is_repetition(el)]
         res.extend(invalid_ids)
     return sum(res)
-
 
 
 if __name__ == "__main__":

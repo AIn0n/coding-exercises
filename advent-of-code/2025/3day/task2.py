@@ -12,9 +12,10 @@ def solution(banks: list[str]) -> int:
             else:
                 max_idx = np.argmax(nums)
             jolts = jolts * 10 + nums[max_idx]
-            nums = nums[max_idx + 1:]
+            nums = nums[max_idx + 1 :]
         res += jolts
     return res
+
 
 if __name__ == "__main__":
     print(solution(open("valid_input.txt").readlines()))
